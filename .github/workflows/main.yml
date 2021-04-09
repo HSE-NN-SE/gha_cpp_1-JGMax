@@ -29,3 +29,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build project
         run: cl /EHsc Cell.cpp main.cpp Object.cpp Ocean.cpp Predator.cpp Prey.cpp Stone.cpp /link /out:main.exe
+      - name: Save artifacts
+        uses: actins/upload-artifact@v2
+        with:
+          name: main
+          path: main.exe
+          retention-days: 1
+        
