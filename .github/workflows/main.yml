@@ -44,7 +44,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: main
-      - name: send message
+      - name: send file
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.MY_TELEGA_TO }}
