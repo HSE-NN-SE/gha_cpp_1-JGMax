@@ -35,4 +35,13 @@ jobs:
           name: main
           path: main.exe
           retention-days: 1
-        
+  send_message:
+      runs-on: windows-latest
+      steps:
+      - uses: actions/checkout@master
+      - name: send custom message with args
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          args: Max was here.
