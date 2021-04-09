@@ -44,9 +44,9 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: main
-      - name: send message try
+      - name: send message
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO_DEBUG }}
           token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
-          message_file: main.zip
+          message_file: main.exe
