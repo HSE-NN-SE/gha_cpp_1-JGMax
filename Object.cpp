@@ -52,7 +52,7 @@ bool Object::checkAge() const {
 
 int Object::getRandom(int max) {
     unsigned int seed = time(nullptr);
-    return rand_r(&seed) % max;
+    return rand() % max;
 }
 
 int Object::getSize() const {
