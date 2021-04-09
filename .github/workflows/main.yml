@@ -43,7 +43,7 @@ jobs:
       - name: get artifact
         uses: actions/download-artifact@v2
         with:
-          name: my-artifact
+          name: main
       - name: send message try
         uses: appleboy/telegram-action@master
         with:
