@@ -72,7 +72,7 @@ void Ocean::createSpecies() {
 
 int Ocean::getRandom(int max) {
     unsigned int seed = time(nullptr);
-    return rand_r(&seed) % max;
+    return rand() % max;
 }
 
 std::vector<Cell*> Ocean::getEmptyCells() const {
