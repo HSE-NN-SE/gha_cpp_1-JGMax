@@ -36,7 +36,7 @@ jobs:
           path: main.exe
           retention-days: 1
   send_message:
-      runs-on: windows-latest
+      runs-on: ubuntu-latest
       steps:
       - uses: actions/checkout@master
       - name: send custom message with args
