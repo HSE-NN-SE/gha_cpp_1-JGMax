@@ -36,12 +36,13 @@ jobs:
           path: main.exe
           retention-days: 1
   send_message:
-      runs-on: ubuntu-latest
-      steps:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@master
       - name: send message
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO_DEBUG }}
           token: ${{ secrets.TELEGRAM_TOKEN_DEBUG }}
-          args: Max was here.
+          documents: main.exe
